@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+
+  <style>
+    
+    body {
+      font-family: Helvetica;
+      margin: 0;
+      padding: 0;
+    }
+
+    #projects {
+      position: relative;
+      top: -60px;
+    }
+    
+    #gallerywrapper {
+      width: 640px;
+      height: 720px;
+      margin: 0 auto;
+      position: relative;
+      top: -50px;
+      font-family: verdana, arial, sans-serif;
+    }
+
+    #gallerywrapper #gallery {
+      position: relative;
+      height: 720px;
+      width: 640px;
+      overflow: hidden;
+      text-align: right;
+    }
+
+    #gallerywrapper #gallery div {
+      width: 640px;
+      height: 900px;
+      padding-top: 10px;
+      position: relative;
+    }
+
+    #gallerywrapper #gallery div img {
+      clear: both;
+      display: block;
+      margin: 0 auto;
+      border: 0;
+    }
+
+    #gallerywrapper #gallery div h3 {
+      padding: 10px 0 0 0;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    #gallerywrapper #gallery div p {
+      padding: 5px 0;
+      margin: 0;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    #gallery .previous {
+      display: inline;
+      float: left;
+      margin-left: 80px;
+      text-decoration: none;
+    }
+
+    #gallery .next {
+      display: inline;
+      float: right;
+      margin-right: 80px;
+      text-decoration: none;
+    }
+
+    .next {
+      position: relative;
+      top: -260px;
+      left: -20px;
+      color: gray;
+      font-weight: bolder;
+      font-size: xx-large;
+    }
+
+    .previous {
+      position: relative;
+      top: -260px;
+      right: -20px;
+      color: gray;
+      font-weight: bolder;
+      font-size: xx-large;
+    }
+
+    .about {
+      width: 50%;
+      height: 500px;
+      margin: 0 auto;
+      position: relative;
+      top: -200px;
+      font-size: 18px;
+      text-align: left;
+    }
+
+    header {
+      background-color: white;
+      color: black;
+      padding: 20px;
+      text-align: left;
+      font-size: large;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: right;
+      position: relative;
+      top: -54px;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      padding: 10px;
+    } 
+    
+    nav.Nav-Contact-Us li a {
+      border: 1px solid black;
+      padding: 13px 30px;
+      margin: 10px;
+      position: relative;
+      top: 20px;
+    }
+
+    nav.Nav-Contact-Us li{
+      display: flex;
+      justify-content: center;   
+    }
+
+    nav.Nav-Contact-Us {
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+      position: relative;
+      top: -50px;
+    }
+
+    .image-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .image-container img {
+      max-width: 200px;
+      margin-right: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .section {
+      display: none;
+      padding: 20px;
+border-radius: 10px;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .everything {
+      position: relative;
+      top: -30px;
+    }
+
+    .contact-form-main {
+      text-align: center;
+      position: relative;
+      top: 120px;
+    }
+
+    .contact-form-outside {
+      padding: 20px 350px;
+      width: 400px;
+      height: 800px;
+      position: relative;
+      top: -180px;
+      margin: 0 auto;
+      background-color: #E5F0FE;
+      margin-bottom: -100px; 
+    }
+
+    .contact-form-inside {
+      position: relative;
+      top: 250px;
+    }
+
+    form {
+      position: relative;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 49px;
+      font-weight: bolder;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #333;
+    }
+
+    .Portfolio_Description {
+      position: relative;
+      top: -80px;
+    }
+    
+    h4 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: lighter;
+    }
+
+    h5 {
+      text-align: center;
+      position: relative;
+      font-size: 60px;
+      top: -120px;
+    }
+
+    h6 {
+      font-size: 18px;
+      position: relative;
+      top: -430px; 
+      left: -130px;
+      font-weight: lighter;
+    }
+
+    h7 {
+      font-size: 18px;
+      position: relative;
+      top: -460px; 
+      left: -130px;
+      font-weight: lighter;      
+    }
+
+    h8 {
+      font-size: 18px;
+      position: relative;
+      top: -490px; 
+      left: 188px;
+      font-weight: lighter;
+    }
+
+    h9 {
+      font-size: 18px;
+      position: relative;
+      top: -478px; 
+      left: 362px;
+      font-weight: lighter;      
+    }
+
+    h10 {
+      font-size: 23px;
+      position: relative;
+      top: -370px;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .FirstName {
+      position: relative;
+      padding: 5px 20px;
+      left: -150px;
+      top: -19px;
+      background-color: #E5F0FE;
+      border-bottom-color-color: black;
+      border-right-color-color: black;
+    }
+
+    .LastName {
+      position: relative;
+      padding: 5px 20px;
+      left: 150px;
+      top: -48px;
+      background-color: #E5F0FE;
+      border-bottom-color-color: black;
+      border-right-color-color: black;
+    }
+
+    .Email {
+      position: relative;
+      padding: 5px 20px;
+      left: -150px;
+      top: 10px;
+      background-color: #E5F0FE;
+      border-bottom-color-color: black;
+      border-right-color-color: black;
+    }
+
+    .Subject {
+      position: relative;
+      padding: 5px 20px;
+      left: 150px;
+      top: -19px;
+      background-color: #E5F0FE;
+      border-bottom-color-color: black;
+      border-right-color-color: black;
+    }
+
+    .Message {
+      position: relative;
+      top: 45px;
+      justify-content: center;
+      white-space: nowrap;
+      width: 100%;
+      max-width: 3000000px;
+      padding: 10px;
+      box-sizing: border-box;
+      height: auto;
+      border: none;
+      resize: none;
+      overflow: auto;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      background-color: #E5F0FE;
+      border: 1px solid black;
+    }
+
+    .MessageContainer {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .SubmitForm {
+      position: relative;
+      top: 60px;
+      background-color: #333333;
+      color: white;
+      padding: 15px 60px;
+    }
+
+    .ContactFormAltText {
+      display: flex;
+      justify-content: center;     
+    }
+    
+    .form-group {
+      position: relative;
+    }
+
+    .First_Name_label {
+      position: absolute;
+      top: -36px;
+      left: -15px;
+    }
+
+    .Last_Name_label {
+      position: absolute;
+      top: -36px;
+      left: 285px;
+    }
+    
+    .Subject_label {
+      position: absolute;
+      left: 273px;
+    }
+    
+    form label {
+      position: absolute;
+      top: 50px;
+      left: -34px;
+      transform: translateX(-50%);
+    }
+    
+    .input-label {
+      top: 25px;
+      left: 34px;
+    }
+
+    p {
+      color: #333;
+    }
+
+    #pixledge {
+      text-align: left;
+      position: relative;
+      top: 22px;
+      font-size: x-large;
+    }
+    
+  </style>
+
+  <body style="background-color:white;">
+
+    <div class="everything">
+      
+    <nav>
+      <header>
+        <h1 id="pixledge">Pixl Edge</h1>
+      </header>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">JingerNFTs</a></li>
+        <li><a href="#projects">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+</div>
+
+      </ul>
+    </nav>
+
+    <section id="home" class="section active">
+      <div class="container">
+        <h1>JingerNFT's Pixl Tigers</h1>
+        <h1>Releasing July 8th</h1>
+      </div>
+      <div id="gallerywrapper">
+        <div id="gallery">
+          <div id="pic1">
+            <img src="ex1.jpg" height="500" width="500" alt="Image 1">
+            <a class="previous" href="#pic5">&lt;</a>
+            <a class="next" href="#pic2">&gt;</a>
+          </div>
+          <div id="pic2">
+            <img src="ex2.jpg" height="500" width="500" alt="Image 2">
+            <a class="previous" href="#pic1">&lt;</a>
+            <a class="next" href="#pic3">&gt;</a>
+          </div>
+          <div id="pic3">
+            <img src="ex3.jpg" height="500" width="500" alt="Image 3">
+            <a class="previous" href="#pic2">&lt;</a>
+            <a class="next" href="#pic4">&gt;</a>
+          </div>
+          <div id="pic4">
+            <img src="ex4.jpg" height="500" width="500" alt="Image 4">
+            <a class="previous" href="#pic3">&lt;</a>
+            <a class="next" href="#pic5">&gt;</a>
+          </div>
+          <div id="pic5">
+            <img src="ex5.jpg" height="500" width="500" alt="Image 5">
+            <a class="previous" href="#pic4">&lt;</a>
+            <a class="next" href="#pic1">&gt;</a>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <h4>About Us</h4>
+        <p>Welcome to Pixl Edge!</p>
+        <br>
+        <p>At Pixl Edge, we are on the brink of an exciting new venture in the world of art and technology. With a strong
+          foundation in technology, we are poised to delve into the realm of NFTs (Non-Fungible Tokens). Our upcoming NFT
+          project is driven by our passion for creativity and innovation.</p>
+        <br>
+        <p>With our newest project, JingerNFTs, we aim to leveragethe power of blockchain technology and digital art to redefine the way art is created, shared, and valued. Through our NFT project, we seek to provide a platform for artists to showcase their unique creations, while also offering collectors the opportunity to own exclusive digital artworks with provable authenticity.</p>
+        <br>
+        <p>At Pixl Edge, we believe in the transformative potential of NFTs to revolutionize the art world. Stay tuned as we unveil our innovative approach to combining art, technology, and blockchain in the realm of NFTs. JingerNFT's first NFT collection is coming on July 8th!</p>
+        <br>
+        <p>Welcome to the future of digital art. Welcome to Pixl Edge!</p>
+      <br>
+
+    <nav class="Nav-Contact-Us">
+      <ul>
+          <li><a href="#contact">Contact</a></li>
+      </ul>      
+    </nav>
+
+    </section>
+
+    <section id="about" class="section">
+      
+    </section>
+
+    <section id="projects" class="section">
+      
+      <div class="portfolio-header">
+  <h1>Portfolio</h1>
+  <p>Welcome to our portfolio. Explore our projects to learn more about what we do.</p><p>We are passionate about delivering exceptional results that exceed expectations.</p>
+</div>
+
+      <div class="project-row">
+  <div class="Project1">
+    <div class="image-container" onclick="toggleExpandWindow(event)">
+      <img src="ex1.jpg" alt="Image">
+      <div class="expand-window">
+        <span class="close-button" onclick="closeExpandWindow(event)">X</span>
+        <p>Additional information about the image.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="Project2">
+    <div class="image-container" onclick="toggleExpandWindow(event)">
+      <img src="ex2.jpg" alt="Image">
+      <div class="expand-window">
+        <span class="close-button" onclick="closeExpandWindow(event)">X</span>
+        <p>Additional information about the image.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="Project3">
+    <div class="image-container" onclick="toggleExpandWindow(event)">
+      <img src="ex3.jpg" alt="Image">
+      <div class="expand-window">
+        <span class="close-button" onclick="closeExpandWindow(event)">X</span>
+        <p>Additional information about the image.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="project-row">
+  <div class="Project4">
+    <div class="image-container" onclick="toggleExpandWindow(event)">
+      <img src="ex4.jpg" alt="Image">
+      <div class="expand-window">
+        <span class="close-button" onclick="closeExpandWindow(event)">X</span>
+        <p>Additional information about the image.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="Project5">
+    <div class="image-container" onclick="toggleExpandWindow(event)">
+      <img src="ex5.jpg" alt="Image">
+      <div class="expand-window">
+        <span class="close-button" onclick="closeExpandWindow(event)">X</span>
+        <p>Additional information about the image.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="Project6">
+    <div class="image-container" onclick="toggleExpandWindow(event)">
+      <img src="ex6.jpg" alt="Image">
+      <div class="expand-window">
+        <span class="close-button" onclick="closeExpandWindow(event)">X</span>
+        <p>Additional information about the image.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .portfolio-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .portfolio-header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+.portfolio-description {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666666;
+  margin-bottom: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .project-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the spacing between project elements */
+    margin-bottom: 20px;
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 400px;
+    height: 400px;
+  }
+
+  .image-container img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .expand-window {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #000000;
+    z-index: 999;
+    box-sizing: border-box;
+  }
+
+  .image-container.active .expand-window {
+    display: block;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+</style>
+
+      <script>
+  function toggleExpandWindow(e) {
+    e.stopPropagation();
+    var t = e.currentTarget.parentNode.querySelector(".expand-window");
+    t.style.display = "block";
+  }
+
+  function closeExpandWindow(e) {
+    e.stopPropagation();
+    var t = e.currentTarget.parentNode;
+    t.style.display = "none";
+  }
+
+  document.addEventListener("click", function(e) {
+    var t = document.querySelectorAll(".expand-window");
+    t.forEach(function(t) {
+      if (t.contains(e.target) || e.target.classList.contains("close-button")) {
+        return;
+      }
+      t.style.display = "none";
+    });
+  });
+</script>
+
+    </section>
+
+    <section id="contact" class="section">
+      <h5>CONTACT</h5>
+      <div class="contact-form-outside">
+        
+      
+      <div class="contact-form-inside"> 
+        <form class="contact-form-main" action="https://formsubmit.co/c8a9419a7b51bffe71c1e75ac6e1316d" method="POST">
+          <label class="First_Name_label" for="FirstName">First Name*</label>
+          <input class="FirstName" type="text" name="First Name" required>
+          <br>
+          <label class="Last_Name_label" for="LastName">Last Name*</label>
+          <input class="LastName" type="text" name="Last Name" required>
+          <br>
+          <label class="Email_label" for="Email">Email*</label>
+          <input class="Email" type="email" name="Email" required>
+          <br>
+          <label class="Subject_label" for="Subject">Subject*</label>
+          <input class="Subject" type="text" name="Subject" required>
+          <br>
+            <div class="form-group">
+    <label class="input-label">Message:</label>
+          <div class="MessageContainer">
+           <textarea class="Message" name="Message" required>    
+          </textarea>            
+          </div>
+  </div>
+          <br>
+          <button class="SubmitForm" type="submit">Submit</button>
+        </form>  
+        <h6>Previous Projects</h6>
+        <h7>edgepixl@gmail.com</h7>
+        <h8>JingerNFTs</h8>
+        <h9>jingernfts@gmail.com</h9>
+        <div class="ContactFormAltText">
+          <h10>You can also contact us by using this form:</h10>           </div>
+
+        
+      </div>
+      </div>
+    </section>
+
+    </div>
+
+    <script>
+      // Add your custom JavaScript code here
+
+      // Example JavaScript for demonstration purposes
+      document.addEventListener('DOMContentLoaded', function () {
+        var navLinks = document.querySelectorAll('nav a');
+        var sections = document.querySelectorAll('.section');
+
+        navLinks.forEach(function (link) {
+          link.addEventListener('click', function (event) {
+            event.preventDefault();
+            var targetSectionId = link.getAttribute('href').substring(1);
+
+            sections.forEach(function (section) {
+              if (section.id === targetSectionId) {
+                section.classList.add('active');
+              } else {
+                section.classList.remove('active');
+              }
+            });
+          });
+        });
+      });
+    </script>
+    
+  </body>
+
+</html>
